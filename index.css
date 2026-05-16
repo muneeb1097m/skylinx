@@ -383,11 +383,6 @@ section + section::before {
 ══════════════════════════════════════ */
 .quotes { padding:100px 0; overflow:hidden; background:#07090f; position:relative; z-index:1; }
 .marquee-wrap { margin-top:3rem; position:relative; }
-.marquee-wrap::before,.marquee-wrap::after {
-  content:''; position:absolute; top:0; width:200px; height:100%; z-index:2; pointer-events:none;
-}
-.marquee-wrap::before { left:0; background:linear-gradient(90deg, #07090f 0%, #07090f 10%, transparent 100%); }
-.marquee-wrap::after  { right:0; background:linear-gradient(-90deg, #07090f 0%, #07090f 10%, transparent 100%); }
 .marquee-track { display:flex; gap:1.2rem; width:max-content; animation:marquee 45s linear infinite; }
 .marquee-track:hover { animation-play-state:paused; }
 @keyframes marquee { 0%{ transform:translateX(0); } 100%{ transform:translateX(-50%); } }
@@ -533,7 +528,6 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   .compare-grid { grid-template-columns:repeat(2,1fr); }
   .footer-grid { grid-template-columns:1fr 1fr; }
   .q-card { min-width:280px; max-width:340px; }
-  .marquee-wrap::before, .marquee-wrap::after { width:80px; }
 }
 
 @media(max-width:768px) {
@@ -555,7 +549,6 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   .footer-grid { grid-template-columns:1fr; gap: 3rem; }
   .q-card { min-width:260px; max-width:300px; padding:1.5rem 2rem; font-size:.88rem; }
   .marquee-track { animation-duration:30s; gap:1rem; }
-  .marquee-wrap::before, .marquee-wrap::after { width:40px; }
   .process-grid { grid-template-columns:1fr 1fr; }
   .process-quote { padding:2.5rem 2rem; }
   .process-quote p { font-size:1.1rem; }
@@ -578,7 +571,6 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   .trust-item { width: 100%; }
   .trust-item strong { font-size: 2rem; }
   .q-card { min-width:240px; max-width:280px; padding:1.2rem 1.5rem; font-size:.85rem; }
-  .marquee-wrap::before, .marquee-wrap::after { width:30px; }
   .final-cta-box { padding:2rem 1.2rem !important; border-radius: 24px; }
   .contact-form { padding:2rem 1.2rem; border-radius: 20px; }
   .process-grid { grid-template-columns:1fr; }
