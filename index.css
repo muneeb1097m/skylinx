@@ -580,3 +580,43 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   .dash-mock { font-size: 0.6rem; }
   .dash-stat-num { font-size: 0.9rem; }
 }
+
+/* Form submission additions */
+.spinner {
+  animation: rotate 2s linear infinite;
+}
+.spinner .path {
+  stroke: currentColor;
+  stroke-linecap: round;
+  animation: dash 1.5s ease-in-out infinite;
+}
+@keyframes rotate {
+  100% { transform: rotate(360deg); }
+}
+@keyframes dash {
+  0% { stroke-dasharray: 1, 150; stroke-dashoffset: 0; }
+  50% { stroke-dasharray: 90, 150; stroke-dashoffset: -35; }
+  100% { stroke-dasharray: 90, 150; stroke-dashoffset: -124; }
+}
+@keyframes scaleUp {
+  0% { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.success-message {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.form-error-msg {
+  color: #ff6b6b;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
