@@ -136,7 +136,6 @@ if (contactForm) {
       }
     });
   }
-}
 
 // ── Meta Conversions API PageView ──
 async function sendCAPIPageView() {
