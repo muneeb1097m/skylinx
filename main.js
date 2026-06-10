@@ -95,7 +95,7 @@ if (contactForm) {
           // Send Lead to Conversions API
           try {
             const leadEventId = 'lead_' + Math.random().toString(36).substring(2, 9);
-            fetch('/api/capi', {
+            await fetch('/api/capi', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({
@@ -118,25 +118,8 @@ if (contactForm) {
             console.error('CAPI Lead error:', capiErr);
           }
 
-          // Build premium success state
-          contactForm.innerHTML = `
-            <div class="success-message" style="text-align: center; padding: 1.5rem 0;">
-              <div class="success-icon-wrap" style="width: 80px; height: 80px; border-radius: 50%; background: rgba(81,207,102,0.1); border: 2px solid #51cf66; display: flex; align-items: center; justify-content: center; margin: 0 auto 2rem; box-shadow: 0 0 30px rgba(81,207,102,0.2); animation: scaleUp 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;">
-                <i data-lucide="check" style="width: 40px; height: 40px; stroke: #51cf66; stroke-width: 3;"></i>
-              </div>
-              <h3 style="font-size: 1.6rem; font-weight: 800; margin-bottom: 1rem; color: #fff; background: linear-gradient(135deg, #fff 30%, var(--blue-light) 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Thank You, ${firstName}!</h3>
-              <p style="color: var(--muted); line-height: 1.7; font-size: 0.95rem; margin-bottom: 2rem;">We have received your discovery call request. One of our senior product partners will reach out to <strong>${email}</strong> within 1 business day.</p>
-              <div style="padding: 1.2rem; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 16px; font-size: 0.85rem; color: #fff; text-align: left;">
-                <span style="display: block; font-weight: 700; color: var(--blue-light); margin-bottom: 0.4rem; text-transform: uppercase; letter-spacing: 0.05em;">What's Next?</span>
-                We'll send you an invitation to choose a convenient time slot for our 45-minute strategy call.
-              </div>
-            </div>
-          `;
-          
-          // Re-initialize lucide icons for the new HTML content
-          if (window.lucide) {
-            window.lucide.createIcons();
-          }
+          // Redirect to the thank you page
+          window.location.href = '/thank-you';
         } else {
           throw new Error('Server responded with status ' + response.status);
         }
