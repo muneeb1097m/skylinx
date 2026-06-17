@@ -503,7 +503,7 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   font-size:.8rem; text-decoration:none; color:var(--muted);
   transition:all .35s var(--ease);
 }
-.social-btn i, .social-btn svg {
+.social-btn i, .social-btn svg, .social-icon {
   display: block;
   width: 18px;
   height: 18px;
