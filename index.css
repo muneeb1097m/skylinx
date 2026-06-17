@@ -504,16 +504,15 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   transition:all .35s var(--ease);
 }
 .social-btn i, .social-btn svg {
+  display: block;
   width: 18px;
   height: 18px;
-  stroke: var(--muted);
+  stroke: currentColor;
   stroke-width: 2;
-  transition: stroke .3s, transform .3s;
+  fill: none;
+  transition: transform .3s;
 }
 .social-btn:hover { border-color:var(--blue); color:var(--blue-light); background:rgba(53,117,152,0.12); transform:translateY(-3px); }
-.social-btn:hover i, .social-btn:hover svg {
-  stroke: var(--blue-light);
-}
 .footer-bottom {
   padding-top:2rem; border-top:1px solid var(--border);
   display:flex; justify-content:space-between; align-items:center;
