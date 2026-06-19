@@ -617,7 +617,7 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   .process-grid { grid-template-columns:1fr; }
   .cta-left h2 { font-size:1.6rem; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 1.5rem; }
-  .nav-cta { padding: 0.6rem 1.2rem; font-size: 0.75rem; }
+  .nav-cta { width: auto; padding: 0.5rem 0.9rem; font-size: 0.72rem; }
   .dash-mock { font-size: 0.6rem; }
   .dash-stat-num { font-size: 0.9rem; }
 }
