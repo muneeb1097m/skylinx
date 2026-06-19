@@ -569,12 +569,44 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   /* Dashboard adjustments */
   .dash-sidebar { display: none; }
   .dash-row { grid-template-columns: 1fr; }
+  
+  /* Navbar and Logo */
+  .logo-img { height: 48px; }
+  
+  /* Floating badges positioning to avoid overlaps on tablet */
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .dash-mock {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .floating-badge {
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0.5rem auto 0 !important;
+    display: inline-flex !important;
+  }
 }
 
 @media(max-width:480px) {
   .container { width:92%; }
   .hero { padding-top: 100px; }
-  .hero-badge { font-size: 0.7rem; padding: 0.4rem 1rem; }
+  .hero-badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 1rem;
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    text-align: left;
+  }
+  .logo-img { height: 38px; }
   .btn { width: 100%; justify-content: center; }
   .hero-ctas { flex-direction: column; }
   .trust-item { width: 100%; }
