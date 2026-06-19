@@ -572,7 +572,7 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   .dash-row { grid-template-columns: 1fr; }
   
   /* Navbar and Logo */
-  .logo-img { height: 48px; }
+  .logo-img { height: 56px; }
   
   /* Floating badges positioning to avoid overlaps on tablet */
   .hero-visual {
@@ -607,8 +607,8 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
     gap: 0.5rem;
     text-align: left;
   }
-  nav { padding: 0.6rem 0; }
-  .logo-img { height: 32px; }
+  nav { padding: 0.8rem 0; }
+  .logo-img { height: 46px; }
   .btn { width: 100%; justify-content: center; }
   .hero-ctas { flex-direction: column; }
   .trust-item { width: 100%; }
