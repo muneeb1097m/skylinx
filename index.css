@@ -595,7 +595,7 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
 }
 
 @media(max-width:480px) {
-  .container { width:92%; }
+  .container { width:94%; }
   .hero { padding-top: 100px; }
   .hero-badge {
     font-size: 0.7rem;
@@ -606,7 +606,8 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
     gap: 0.5rem;
     text-align: left;
   }
-  .logo-img { height: 38px; }
+  nav { padding: 0.6rem 0; }
+  .logo-img { height: 32px; }
   .btn { width: 100%; justify-content: center; }
   .hero-ctas { flex-direction: column; }
   .trust-item { width: 100%; }
@@ -617,7 +618,7 @@ footer ul li a:hover { color:var(--blue-light); padding-left:4px; }
   .process-grid { grid-template-columns:1fr; }
   .cta-left h2 { font-size:1.6rem; }
   .footer-bottom { flex-direction: column; text-align: center; gap: 1.5rem; }
-  .nav-cta { width: auto; padding: 0.5rem 0.9rem; font-size: 0.72rem; }
+  .nav-cta { width: auto; padding: 0.4rem 0.75rem; font-size: 0.68rem; white-space: nowrap; }
   .dash-mock { font-size: 0.6rem; }
   .dash-stat-num { font-size: 0.9rem; }
 }
