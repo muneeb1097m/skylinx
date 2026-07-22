@@ -244,13 +244,12 @@ if (contactForm) {
         </span>
       `;
 
-      // 1. Submit to Google Sheet endpoint
+      // 1. Submit to Google Sheet endpoint using robust query params to bypass CORS/parsing issues
       if (GOOGLE_SHEET_WEBHOOK_URL) {
-        fetch(GOOGLE_SHEET_WEBHOOK_URL, {
+        const queryParams = new URLSearchParams(formData).toString();
+        fetch(`${GOOGLE_SHEET_WEBHOOK_URL}?${queryParams}`, {
           method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(formData)
+          mode: 'no-cors'
         }).catch(err => console.error('Google Sheet Sync Error:', err));
       }
 
