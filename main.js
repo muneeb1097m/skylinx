@@ -54,6 +54,7 @@ if (contactForm) {
     const firstName = document.getElementById('firstName').value.trim();
     const lastName = document.getElementById('lastName').value.trim();
     const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
     const company = document.getElementById('company').value.trim();
     const service = document.getElementById('service').value;
     const message = document.getElementById('message').value.trim();
@@ -63,6 +64,7 @@ if (contactForm) {
       firstName,
       lastName,
       email,
+      phone,
       company,
       service,
       message,
@@ -104,6 +106,7 @@ if (contactForm) {
                 eventSourceUrl: window.location.href,
                 userData: {
                   email: email,
+                  phone: phone,
                   firstName: firstName,
                   lastName: lastName
                 },
