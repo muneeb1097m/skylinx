@@ -203,6 +203,7 @@ if (contactForm) {
     const lastName = nameParts.slice(1).join(' ') || '';
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
+    const website = document.getElementById('website') ? document.getElementById('website').value.trim() : '';
     const company = document.getElementById('company').value.trim();
     const service = document.getElementById('service').value;
     const message = document.getElementById('message').value.trim();
@@ -226,6 +227,7 @@ if (contactForm) {
       lastName,
       email,
       phone,
+      website,
       company,
       service,
       message,
