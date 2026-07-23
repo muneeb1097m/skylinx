@@ -256,6 +256,16 @@ if (contactForm) {
       // 2. Send Lead to Conversions API
       try {
         const leadEventId = 'lead_' + Math.random().toString(36).substring(2, 9);
+        
+        // Track browser pixel Lead event with eventID for deduplication
+        if (typeof fbq === 'function') {
+          fbq('track', 'Lead', {
+            value: 0,
+            currency: 'USD',
+            content_category: service
+          }, { eventID: leadEventId });
+        }
+
         fetch('/api/capi', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
