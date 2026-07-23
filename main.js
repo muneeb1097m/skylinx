@@ -231,8 +231,7 @@ if (contactForm) {
       company,
       service,
       message,
-      submittedAt: new Date().toISOString(),
-      sourceUrl: window.location.href
+      submittedAt: new Date().toISOString()
     };
 
     try {
