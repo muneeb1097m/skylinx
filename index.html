@@ -400,15 +400,9 @@
           <div class="form-layer active" id="layer1">
             <div class="layer-title"><i data-lucide="user"></i> Layer 1: Basic Details</div>
             
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label for="firstName">First Name *</label>
-                <input type="text" id="firstName" name="firstName" placeholder="John" required>
-              </div>
-              <div class="form-group">
-                <label for="lastName">Last Name *</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Smith" required>
-              </div>
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" placeholder="John Smith" required>
             </div>
 
             <div class="form-group">
@@ -417,7 +411,7 @@
             </div>
 
             <button type="button" class="btn btn-glow form-submit-btn" id="nextToStep2Btn">
-              Next: Contact Details →
+              Next →
             </button>
           </div>
 
@@ -426,7 +420,7 @@
             <div class="layer-title"><i data-lucide="mail"></i> Layer 2: Contact Details</div>
             
             <div class="form-group">
-              <label for="email">Work Email *</label>
+              <label for="email">Email *</label>
               <input type="email" id="email" name="email" placeholder="john@company.com" required>
             </div>
 
@@ -468,11 +462,11 @@
                 <!-- Custom Options Popup Box -->
                 <div class="custom-select-options" id="customSelectOptions">
                   <div class="cs-option" data-value="AI & Automation">
-                    <div class="cs-opt-icon"><i data-lucide="bot"></i></div>
-                    <div class="cs-opt-text">
-                      <strong>AI Agents &amp; Intelligent Document Automation</strong>
-                      <span>Autonomous 24/7 AI document parsing &amp; workflows</span>
-                    </div>
+                     <div class="cs-opt-icon"><i data-lucide="bot"></i></div>
+                     <div class="cs-opt-text">
+                       <strong>AI Agents &amp; Intelligent Document Automation</strong>
+                       <span>Autonomous 24/7 AI document parsing &amp; workflows</span>
+                     </div>
                   </div>
                   <div class="cs-option" data-value="API Integration Hub">
                     <div class="cs-opt-icon"><i data-lucide="workflow"></i></div>
@@ -508,7 +502,7 @@
 
             <div class="form-group">
               <label for="message">Brief Description of Your Manual Challenge *</label>
-              <textarea id="message" name="message" rows="3" placeholder="Tell us about the manual tasks or tools you want to automate..." required></textarea>
+              <textarea id="message" name="message" rows="3" placeholder="Tell us about the manual tasks or tools you want to automate..." minlength="20" required></textarea>
             </div>
 
             <div class="step-actions">

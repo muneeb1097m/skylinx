@@ -112,12 +112,11 @@ if (contactForm) {
   if (nextToStep2Btn) {
     nextToStep2Btn.addEventListener('click', () => {
       clearFormError(layer1);
-      const firstName = document.getElementById('firstName').value.trim();
-      const lastName = document.getElementById('lastName').value.trim();
+      const fullName = document.getElementById('fullName').value.trim();
       const company = document.getElementById('company').value.trim();
 
-      if (!firstName || !lastName || !company) {
-        showFormError('Please fill in your First Name, Last Name, and Company Name.', layer1);
+      if (!fullName || !company) {
+        showFormError('Please fill in your Full Name and Company Name.', layer1);
         return;
       }
 
@@ -198,8 +197,10 @@ if (contactForm) {
     e.preventDefault();
     clearFormError(layer3);
 
-    const firstName = document.getElementById('firstName').value.trim();
-    const lastName = document.getElementById('lastName').value.trim();
+    const fullName = document.getElementById('fullName').value.trim();
+    const nameParts = fullName.split(/\s+/);
+    const firstName = nameParts[0] || '';
+    const lastName = nameParts.slice(1).join(' ') || '';
     const email = document.getElementById('email').value.trim();
     const phone = document.getElementById('phone') ? document.getElementById('phone').value.trim() : '';
     const company = document.getElementById('company').value.trim();
@@ -210,8 +211,8 @@ if (contactForm) {
       showFormError('Please select what process you are looking to automate.', layer3);
       return;
     }
-    if (!message) {
-      showFormError('Please provide a brief description of your manual challenge.', layer3);
+    if (!message || message.length < 20) {
+      showFormError('Please provide a brief description of your manual challenge (at least 20 characters).', layer3);
       return;
     }
 
@@ -220,6 +221,7 @@ if (contactForm) {
 
     // Prepare data payload
     const formData = {
+      fullName,
       firstName,
       lastName,
       email,
